@@ -9,7 +9,7 @@
 
 **Topic 2 Managing RHEL Security with Red Hat Errata**
   
-**Update info for Security**
+**Using DNF to Manage Security Errata**
 
 ```
 dnf updateinfo 

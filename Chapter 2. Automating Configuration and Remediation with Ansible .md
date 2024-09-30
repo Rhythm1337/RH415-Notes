@@ -38,3 +38,42 @@ serverc
 minecraft
 rust
 ```
+
+**Ansible Custom .cfg**
+
+```
+[defaults]
+inventory = ./inventory
+remote_user = user
+ask_pass = false
+
+[privilege_escalation]
+become = true
+become_method = sudo
+become_user = root
+become_ask_pass = false
+```
+
+**Commands (do -m stdout for everything displayed on the terminal)**
+
+```
+ansible-navigator config
+ansible-navigator collections
+ansible-navigator doc ansible.posix.firewalld
+```
+
+**Example Play**
+
+```
+---
+- name: Configure important user consistently
+  hosts: servera
+  tasks:
+    - name: clashroyale exists with UID 4000
+      ansible.builtin.user:
+        name: clashroyale
+        uid: 9999
+        state: present
+```
+
+

@@ -49,4 +49,11 @@ update-crypto-policies --check
 
 ```
 
+# Topic 5 Reviewing Recommended Security Practices
+done!
 
+# Topic 6 Guided Exercise: Implementing Recommended Security Practices 
+done!
+
+# Topic 7 End of chapter Lab
+done!

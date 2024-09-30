@@ -60,6 +60,12 @@ become_ask_pass = false
 ansible-navigator config
 ansible-navigator collections
 ansible-navigator doc ansible.posix.firewalld
+
+ansible-navigator -m stdout playbook.yml
+ansible-navigator -m stdout playbook.yml --syntax-check
+ansible-navigator -m stdout playbook.yml --check
+
+
 ```
 
 **Example Play**

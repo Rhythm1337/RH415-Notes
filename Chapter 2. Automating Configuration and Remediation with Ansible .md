@@ -82,4 +82,14 @@ ansible-navigator -m stdout playbook.yml --check
         state: present
 ```
 
+# Topic 2 Guided Exercise: Configuring Ansible for Security Automation
+done!
 
+# Topic 3 Managing Playbooks with Automation Controller
+> basically ansible but with gui
+
+# Topic 4 Guided Exercise: Managing Playbooks with Automation Controller 
+done!
+
+# Topic 5 End of chapter Lab
+done!

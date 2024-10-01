@@ -20,7 +20,7 @@ cryptsetup luksDump /dev/vdb1
 **Opening and Mounting Encrypted Devices**
 
 ```
-crysetup status /dev/vdb_hehehaw
+cryptsetup status /dev/vdb_hehehaw
 cryptsetup close vdb1_hehehaw
 ```
 

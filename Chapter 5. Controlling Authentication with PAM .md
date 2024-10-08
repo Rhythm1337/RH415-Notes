@@ -83,3 +83,17 @@ done!
 authselect select minimal with-fallback --force
 cat /etc/security/faillock.conf
 ```
+
+**Locked Accounts**
+
+```
+faillock
+faillock --user minecraft
+faillock --user minecraft --reset
+```
+
+# Topic 6 Guided Exercise: Limiting Access after Failed Logins
+done!
+
+# Topic 7 End of chapter Lab
+done!

@@ -1,5 +1,5 @@
 # Chapter 6. Recording System Events with Audit
-#  Configuring Audit to Record System Events
+# Topic 1 Configuring Audit to Record System Events
 
 **Linux Audit System**
 
@@ -23,3 +23,23 @@ This directory contains manually configured audit rules
 /etc/audit/rules.d/
 ```
 
+**Remote Logging**
+
+Set the **log_format** = ENRICHED parameter to resolve the UID, GID, system call number, architecture, and socket address information
+Set the **name_format** = HOSTNAME parameter to include the machine's hostname in each message.
+
+### Rsyslog Remote Logging
+
+Configure the rsyslog /etc/rsyslog.conf, Open the 514/UDP firewall port for standard syslog logging.
+
+### Audit Remote Logging
+
+If sending messages to remote auditd daemon, then install audispd-plugins package on client. On the client, the 
+/etc/audit/plugins.d/audisp-remote.conf 
+active = yes 
+
+/etc/audit/audisp-remote.conf file
+remote_server IP/ hostname auditd server.
+Update the port if your remote server is not listening on the default 60/TCP port.
+
+# Topic 2 Guided Exercise: Configuring Audit to Record System Events 

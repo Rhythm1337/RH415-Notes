@@ -50,9 +50,12 @@ done!
 **Interpreting Audit Messages**
 
 ```
-type=SYSCALL msg=audit(1371716130.596:28708): arch=c000003e syscall=2 success=yes exit=4 a0=261b130 a1=90800 a2=e a3=19 items=1 ppid=2548 pid=26131 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=1 comm="aureport" exe="/sbin/aureport" subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key="audit-access"
+type=SYSCALL msg=audit(1371716130.596:28708): arch=c000003e syscall=2 success=yes exit=4 a0=261b130 a1=90800 a2=e a3=19 items=1 ppid=2548 pid=26131 auid=1000
+uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=1 comm="aureport" exe="/sbin/aureport"
+subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key="audit-access"
 type=CWD msg=audit(1371716130.596:28708):  cwd="/root"
-type=PATH msg=audit(1371716130.596:28708): item=0 name="/var/log/audit" inode=17998 dev=fd:01 mode=040750 ouid=0 ogid=0 rdev=00:00 obj=system_u:object_r:auditd_log_t:s0
+type=PATH msg=audit(1371716130.596:28708): item=0 name="/var/log/audit" inode=17998 dev=fd:01 mode=040750 ouid=0
+ogid=0 rdev=00:00 obj=system_u:object_r:auditd_log_t:s0
 ```
 
 **type=SYSCALL** 

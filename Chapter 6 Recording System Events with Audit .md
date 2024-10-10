@@ -47,7 +47,7 @@ done!
 
 # Topic 3 Inspecting Audit Logs 
 
-**Interpreting Audit Messages**
+## Interpreting Audit Messages
 
 ```
 type=SYSCALL msg=audit(1371716130.596:28708): arch=c000003e syscall=2 success=yes exit=4

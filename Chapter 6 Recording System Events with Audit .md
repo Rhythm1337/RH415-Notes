@@ -50,7 +50,8 @@ done!
 **Interpreting Audit Messages**
 
 ```
-type=SYSCALL msg=audit(1371716130.596:28708): arch=c000003e syscall=2 success=yes exit=4 a0=261b130 a1=90800 a2=e a3=19 items=1 ppid=2548 pid=26131 auid=1000
+type=SYSCALL msg=audit(1371716130.596:28708): arch=c000003e syscall=2 success=yes exit=4
+a0=261b130 a1=90800 a2=e a3=19 items=1 ppid=2548 pid=26131 auid=1000
 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=1 comm="aureport" exe="/sbin/aureport"
 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key="audit-access"
 type=CWD msg=audit(1371716130.596:28708):  cwd="/root"
@@ -77,4 +78,66 @@ This records the Audit UID of the user that triggered this event.
 **audit-access**
 
 This is a identifier that you can use when searching for events
+
+## Searching for Events
+
+**By Time Start**
+
+```
+ausearch -ts recent -i 
+ausearch -ts recent -i ./raw_audit.log
+```
+
+**By Process ID**
+
+```
+ausearch -p 1337 --raw
+```
+
+**By Event ID**
+
+```
+ausearch -a 99
+```
+
+**By Message Type**
+
+```
+ausearch -m AVC
+ausearch -m LOGINS
+```
+
+AVC = SELinux
+
+**By File Name**
+
+```
+ausearch -f /etc/shadow
+```
+
+**By Date**
+
+```
+--start [start-date] [start-time]
+```
+
+## Interpreting Audit Log Entries
+
+```
+ausearch -a 8888 -i
+```
+
+## Reporting on Audit Messages
+
+```
+aureport
+ausearch -f /etc/shadow | aureport
+```
+
+## Tracing a Program
+
+```
+autrace /bin/bash
+ausearch --raw -p 26472 | aureport --file -i
+```
 

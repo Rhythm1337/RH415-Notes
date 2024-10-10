@@ -43,3 +43,6 @@ remote_server IP/ hostname auditd server.
 Update the port if your remote server is not listening on the default 60/TCP port.
 
 # Topic 2 Guided Exercise: Configuring Audit to Record System Events 
+done!
+
+# Topic 3 Inspecting Audit Logs 

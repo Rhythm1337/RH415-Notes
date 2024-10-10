@@ -55,9 +55,23 @@ type=CWD msg=audit(1371716130.596:28708):  cwd="/root"
 type=PATH msg=audit(1371716130.596:28708): item=0 name="/var/log/audit" inode=17998 dev=fd:01 mode=040750 ouid=0 ogid=0 rdev=00:00 obj=system_u:object_r:auditd_log_t:s0
 ```
 
-**type=SYSCALL** It is a record/message type.
-**msg=audit(1371716130.596:28708)** This gives the time stamp and the event ID. 1371716130.596 is the time stamp 28708 is the Audit event number.
-**syscall=2** It is a type of the first record is SYSCALL, which shows information about a system call made to the kernel.
-**auid=1000** This records the Audit UID of the user that triggered this event.
-**audit-access** This is a identifier that you can use when searching for events
+**type=SYSCALL** 
+
+It is a record/message type.
+
+**msg=audit(1371716130.596:28708)**
+
+This gives the time stamp and the event ID. 1371716130.596 is the time stamp 28708 is the Audit event number.
+
+**syscall=2**
+
+It is a type of the first record is SYSCALL, which shows information about a system call made to the kernel.
+
+**auid=1000**
+
+This records the Audit UID of the user that triggered this event.
+
+**audit-access**
+
+This is a identifier that you can use when searching for events
 

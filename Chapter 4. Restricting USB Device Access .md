@@ -11,9 +11,14 @@ USBGuard is a software that protects your system from rouge USB devices by imple
 ```
 dnf install usbguard
 systemctl enable --now usbguard.service
+cat /etc/usbguard/rules.conf
 dnf install usbutils udisks2
-
-usbguard help
 ```
 
+More commands are discussed in detail, do the next lab execrise to get a better understanding of everything.
+
 # Topic 2 Guided Exercise: Controlling USB access with USBGuard
+Done!
+
+# Topic 3 End of chanpter Lab
+Done!

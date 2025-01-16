@@ -14,5 +14,6 @@ systemctl enable --now usbguard.service
 dnf install usbutils udisks2
 
 usbguard help
-
 ```
+
+# Topic 2 Guided Exercise: Controlling USB access with USBGuard

@@ -25,4 +25,4 @@ cryptsetup close vdb1_hehehaw
 ```
 
 # Topic 2 - 5
-Done!
+Done! (just do guided exercises, they are very good in making you understand the concepts of how to mount, use ansible roles and more)

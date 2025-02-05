@@ -152,3 +152,24 @@ You can use auditctl command to add rules from the command line. By default if y
 - File System rules to monitor access to files and directories
 - System Call rules to monitor the execution of system calls by processes
 - Control rules configure the audit system itself
+
+## Setting File System Watch Rules
+
+```
+auditctl -w file -p permession -k key
+auditctl -w /etc/passwd -p wa -k user-edit
+```
+
+-w is name of file or directory to watch (r for read, w for write, x for execute, a for attribute changes)
+-p is permission type
+-k is a key set so you can search in auditctl
+
+## Setting System Call Rules
+
+```
+auditctl -a <list>,<action> \
+    [-F <filter-expression>]... \
+    [-C <compare-expression>]... \
+    [-S <system-call>]...
+```
+

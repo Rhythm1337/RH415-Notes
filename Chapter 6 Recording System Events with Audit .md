@@ -141,3 +141,14 @@ autrace /bin/bash
 ausearch --raw -p 26472 | aureport --file -i
 ```
 
+# Topic 4 Writing Custom Audit Rules
+## Customizing Audit Rules
+You can create custom Auditing Rules, Monitoring System call usage and file access, Auditing rules for compliance with industry standards and get a better understanding on how users and processes are using your system.
+
+## Adding Rules
+You can use auditctl command to add rules from the command line. By default if you add a audit rule, it will be added at the bottom of the current list but if you want to add the rule at the start of the list, that is possible too.
+
+**The Audit System uses 3 types of rules**
+- File System rules to monitor access to files and directories
+- System Call rules to monitor the execution of system calls by processes
+- Control rules configure the audit system itself

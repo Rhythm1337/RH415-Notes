@@ -173,3 +173,34 @@ auditctl -a <list>,<action> \
     [-S <system-call>]...
 ```
 
+**Example Rules**
+
+```
+auditctl -a exit,always -F arch=b32 -F auid>=1000 -S rename \
+    -S renameat -F subj_type!=mysqld_t -k rename
+```
+
+```
+auditctl -a exclude,never -F auid=example \
+    -F msgtype=USER_LOGIN -F success=0
+```
+
+## Setting Control Rules
+
+Removes all Rules:
+
+```
+auditctl -D
+```
+
+Removes File System Rule that monitors /bin/ directory
+
+```
+auditctl -W /bin/
+```
+
+Setting Current System Rules to be immutable
+
+```
+
+```
